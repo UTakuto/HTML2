@@ -1,0 +1,118 @@
+html {
+  font-size: 62.5%;
+}
+
+header {
+  width: 100%;
+  font-size: 1.5rem;
+  padding: 10px 0 10px 10px;
+  background-color: #333;
+}
+
+header h1 {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.mainVisualBox {
+  background: 1px 1px repeat url(../img/03_bg_overlay.png),
+    linear-gradient(to bottom, rgba(80, 80, 80, 0.6), rgba(0, 0, 0, 0.1)),
+    url(../img/03_bg.jpg) center bottom / cover;
+  background-size: 4px 4px, 100% 100%, cover;
+  height: 600px;
+  position: relative;
+}
+
+.mainVisualBox section h2 {
+  color: #fff;
+  font-size: 8rem;
+  font-family: "Antonio", sans-serif;
+  border-bottom: #fff solid 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.styleWrap {
+  border: dotted 1px #333;
+  margin: 20px 20px 0;
+  height: auto;
+  font-size: 1.4rem;
+}
+
+.styleWrap section {
+  padding: 20px 0 0 37px;
+}
+
+.title {
+  padding-bottom: 20px;
+}
+
+p {
+  padding-bottom: 40px;
+}
+
+.btn a {
+  width: 260px;
+  height: 60px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: #46c4db;
+  text-decoration: none;
+}
+
+.btn a:hover {
+  background-color: #55b4c6;
+  /* box-shadow: 4px 4px 4px rgb(50, 50, 50);
+  position: relative;
+  top: 4px; */
+}
+
+.btnStyle2 a {
+  border-radius: 8px;
+}
+
+.btnStyle3 a {
+  box-shadow: 0 6px 0 rgba(53, 147, 164, 1);
+}
+
+.icon a::after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 20px;
+  margin: auto 0;
+  display: block;
+  content: "";
+  width: 25px;
+  height: 25px;
+  background-size: 100% 100%;
+  /* border: solid 2px tomato; */
+}
+
+.iconArrow::after {
+  background-image: url(../img/03_iconArrow.svg);
+}
+
+.iconStore::after {
+  background-image: url(../img/03_iconStore.svg);
+}
+
+footer {
+  text-align: center;
+  padding-top: 40px;
+}
+
+/* .btnStyle3 a:hover {
+  box-shadow: 0 6px 0 rgba(53, 147, 164, 1), 0 10px 4px rgb(50, 50, 50);
+} */
+
+/* .btnStyle3 a:active {
+  box-shadow: none;
+  position: relative;
+  top: 4px;
+} */
