@@ -1,5 +1,4 @@
-html,
-body {
+html {
   width: 100%;
   font-size: 62.5%;
   font-family: "Sawarabi Mincho", serif;
@@ -97,6 +96,7 @@ nav {
   animation: fadeInAnime 1.5s;
 }
 
+/*keyframes set*/
 @keyframes fadeInAnime {
   0% {
     opacity: 0;
@@ -108,7 +108,7 @@ nav {
 }
 
 .catchText h2 {
-  font-size: 5rem;
+  font-size: 5.6rem;
   border-bottom: solid 2px #fff;
 }
 
@@ -118,6 +118,29 @@ nav {
   line-height: 3.3rem;
 }
 
+/*media screen set*/
+@media screen and (max-width: 768px) {
+  .catchBox {
+    justify-content: center;
+  }
+
+  .catchText {
+    margin: 0;
+  }
+
+  .catchText h2 {
+    font-size: 5.2rem;
+    border-bottom: solid 2px #fff;
+  }
+
+  .catchText p {
+    margin: 10px;
+    font-size: 1.2rem;
+    line-height: 3.3rem;
+  }
+}
+
+/*kyoto trip set*/
 .tripWrap {
   width: 100%;
   margin: 50px 0 50px;
