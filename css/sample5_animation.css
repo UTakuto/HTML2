@@ -1,0 +1,185 @@
+/*
+sample5 - animation
+CSSで設定するアニメーション方法をサンプルファイルを通じて
+学習しましょう。
+*/
+
+/*
+case1. transitionの設定:背景色の変更
+*/
+
+.t1 {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  background: #2ccfb1;
+  /*transitionの設定*/
+  transition: 1s;
+}
+
+.t1:hover {
+  background: tomato;
+}
+
+/*
+case2. transitionの設定:要素の幅変更
+*/
+
+.t2 {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  background: #2ccfb1;
+  /*transitionの設定*/
+  transition: width 1s linear;
+}
+.t2:hover {
+  width: 500px;
+  background: tomato;
+}
+
+/*
+case3. transitionの設定:delayの幅変更
+*/
+
+.t3 {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  background: #2ccfb1;
+  /*transitonの設定*/
+  transition: 1s cubic-bezier(0, 0.95, 0.67, 0.36);
+}
+.t3:hover {
+  width: 500px;
+  background: tomato;
+}
+
+/*
+case4. animationの設定
+*/
+
+.a1 {
+  display: table-cell;
+  width: 50px;
+  height: 50px;
+  vertical-align: middle;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  background: #2ccfb1;
+  /*animationの設定*/
+  animation: 3s a1anime forwards;
+}
+@keyframes a1anime {
+  0% {
+    width: 50px;
+  }
+  100% {
+    width: 500px;
+  }
+}
+
+/*
+case5. animationの設定
+animation-fill-mode
+animation-direction
+animation-interaction-count
+など設定を追加してみる
+※ 通常はanimationプロパティに一括で指定がベターです。
+*/
+.a2 {
+  display: table-cell;
+  width: 50px;
+  height: 50px;
+  vertical-align: middle;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  background: #2ccfb1;
+  /*animationの設定*/
+  animation: 3s infinite a2anime forwards alternate;
+}
+
+@keyframes a2anime {
+  0% {
+    width: 50px;
+    background: #2ccfb1;
+  }
+  50% {
+    width: 20px;
+    background: tomato;
+  }
+  100% {
+    width: 500px;
+    background: rgb(224, 123, 220);
+  }
+}
+
+/*
+case6. animationの設定
+a3クラスを反時計回りに移動させてみましょう
+*/
+
+.a3 {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  background: #2ccfb1;
+  position: relative;
+  top: 0;
+  left: 0;
+  /*animationの設定*/
+  animation: 3s infinite a3anime;
+}
+
+@keyframes a3anime {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  25% {
+    top: 200px;
+    left: 0;
+  }
+  50% {
+    top: 200px;
+    left: 200px;
+  }
+  75% {
+    left: 200px;
+    top: 0;
+  }
+  100% {
+    top: 0;
+    left: 0;
+  }
+}
+
+/*
+case7. コマ送りアニメーション
+a4クラス:hover状態でコマ送りアニメーションを設定する
+*/
+
+.a4 {
+  width: 200px;
+  height: 300px;
+  background: url("../img/sample5_anime.jpg") no-repeat;
+  /*animationの設定*/
+  transition: 1s steps(4);
+}
+.a4:hover {
+  background-position: -800px 0;
+}
